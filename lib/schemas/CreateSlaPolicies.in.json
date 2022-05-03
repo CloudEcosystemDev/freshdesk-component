@@ -1,0 +1,1 @@
+{"name": "string example", "sla_target": {}, "applicable_to": {}, "requiredArray": ["name", "sla_target", "applicable_to"]}

@@ -1,0 +1,1 @@
+{"id": 1, "created_at": "2019-12-18T11:45:25.017Z", "updated_at": "2019-12-18T11:45:25.017Z", "name": "German travel experts", "agents": [{"id": 1}], "match_type": "any", "conditions": [{"resource_type": "ticket", "field_name": "source", "operator": "in", "value": [2, 4]}], "rank": 1}

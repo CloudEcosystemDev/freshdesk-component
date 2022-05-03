@@ -1,0 +1,1 @@
+{"properties": [{"id": 1, "name": "default", "description": "Default Business Hour", "actions": [{"name": "ticket_type", "value": "Problem"}], "private": false, "created_at": "2018-08-16T09:08:53+05:30", "updated_at": "2018-08-16T09:08:53+05:30"}]}

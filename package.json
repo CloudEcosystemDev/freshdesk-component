@@ -1,0 +1,39 @@
+{
+  "name": "freshdesk-component",
+  "version": "1.0.1",
+  "description": "OIH Component for freshdesk",
+  "homepage": "https://openintegrationhub.com/",
+  "author": {
+    "name": "Lafiotis Jannis"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "freshdesk",
+    "connector",
+    "oih"
+  ],
+  "scripts": {
+    "start": "node ./node_modules/@openintegrationhub/ferryman/runGlobal.js",
+    "pretest": "eslint lib test --ext .js --ext .json --fix",
+    "test": "NODE_ENV=test mocha test/* --timeout 10000",
+    "test-watch": "nodemon --exec \"npm test \""
+  },
+  "engines": {
+    "node": "8.16.2",
+    "npm": ">=5.4"
+  },
+  "dependencies": {
+    "@openintegrationhub/ferryman": "^2.1.0",
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-json": "^1.2.1",
+    "eslint-plugin-mocha": "^5.2.0"
+  },
+  "license": "Apache 2.0"
+}

@@ -1,0 +1,1053 @@
+{
+  "triggers": {
+    "ListAllTickets": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Tickets",
+      "description": "List All Tickets",
+      "callParams": { "pathName": "/api/v2/tickets", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllTickets.in.json",
+        "out": "./lib/schemas/ListAllTickets.out.json"
+      }
+    },
+    "ListAllConversationsOfATicket": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Conversations of a Ticket",
+      "description": "List All Conversations of a Ticket",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[id]/conversations",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllConversationsOfATicket.in.json",
+        "out": "./lib/schemas/ListAllConversationsOfATicket.out.json"
+      }
+    },
+    "ListAllTimeEntriesOfATicket": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Time Entries of a Ticket",
+      "description": "List All Time Entries of a Ticket",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[id]/time_entries",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllTimeEntriesOfATicket.in.json",
+        "out": "./lib/schemas/ListAllTimeEntriesOfATicket.out.json"
+      }
+    },
+    "ListAllSatisfactionRatingsOfATicket": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Satisfaction Ratings of a Ticket",
+      "description": "List All Satisfaction Ratings of a Ticket",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[ticket_id]/satisfaction_ratings",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllSatisfactionRatingsOfATicket.in.json",
+        "out": "./lib/schemas/ListAllSatisfactionRatingsOfATicket.out.json"
+      }
+    },
+    "ListAllContacts": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Contacts",
+      "description": "List All Contacts",
+      "callParams": { "pathName": "/api/v2/contacts", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllContacts.in.json",
+        "out": "./lib/schemas/ListAllContacts.out.json"
+      }
+    },
+    "SearchContacts": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Search Contacts",
+      "description": "Search Contacts",
+      "callParams": {
+        "pathName": "/api/v2/contacts/autocomplete?name=[keyword]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/SearchContacts.in.json",
+        "out": "./lib/schemas/SearchContacts.out.json"
+      }
+    },
+    "ListAllContactFields": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Contact Fields",
+      "description": "List All Contact Fields",
+      "callParams": { "pathName": "/api/v2/contact_fields", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllContactFields.in.json",
+        "out": "./lib/schemas/ListAllContactFields.out.json"
+      }
+    },
+    "ContactImport": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Contact Import",
+      "description": "Contact Import",
+      "callParams": { "pathName": "api/v2/contacts/imports", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ContactImport.in.json",
+        "out": "./lib/schemas/ContactImport.out.json"
+      }
+    },
+    "SearchAgents": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Search Agents",
+      "description": "Search Agents",
+      "callParams": {
+        "pathName": "/api/v2/agents/autocomplete?name=[keyword]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/SearchAgents.in.json",
+        "out": "./lib/schemas/SearchAgents.out.json"
+      }
+    },
+    "ListAllSkills": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List all Skills",
+      "description": "List all Skills",
+      "callParams": { "pathName": "api/v2/skills/", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllSkills.in.json",
+        "out": "./lib/schemas/ListAllSkills.out.json"
+      }
+    },
+    "ListAllRoles": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Roles",
+      "description": "List All Roles",
+      "callParams": { "pathName": "/api/v2/roles", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllRoles.in.json",
+        "out": "./lib/schemas/ListAllRoles.out.json"
+      }
+    },
+    "ListAllGroups": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Groups",
+      "description": "List All Groups",
+      "callParams": { "pathName": "/api/v2/admin/groups", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllGroups.in.json",
+        "out": "./lib/schemas/ListAllGroups.out.json"
+      }
+    },
+    "ListAllAgentsInAGroup": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Agents in a Group",
+      "description": "List All Agents in a Group",
+      "callParams": {
+        "pathName": "/api/v2/admin/groups/[id]/agents",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllAgentsInAGroup.in.json",
+        "out": "./lib/schemas/ListAllAgentsInAGroup.out.json"
+      }
+    },
+    "ListAllCompanies": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Companies",
+      "description": "List All Companies",
+      "callParams": { "pathName": "/api/v2/companies", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllCompanies.in.json",
+        "out": "./lib/schemas/ListAllCompanies.out.json"
+      }
+    },
+    "ListAllCompanyFields": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Company Fields",
+      "description": "List All Company Fields",
+      "callParams": { "pathName": "/api/v2/company_fields", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllCompanyFields.in.json",
+        "out": "./lib/schemas/ListAllCompanyFields.out.json"
+      }
+    },
+    "CompanyImport": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Company Import",
+      "description": "Company Import",
+      "callParams": { "pathName": "api/v2/companies/imports", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/CompanyImport.in.json",
+        "out": "./lib/schemas/CompanyImport.out.json"
+      }
+    },
+    "ListAllFolders": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Folders",
+      "description": "List All Folders",
+      "callParams": { "pathName": "/canned_response_folders", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllFolders.in.json",
+        "out": "./lib/schemas/ListAllFolders.out.json"
+      }
+    },
+    "GetDetailsOfCannedResponsesInAFolder": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get details of Canned Responses in a Folder",
+      "description": "Get details of Canned Responses in a Folder",
+      "callParams": {
+        "pathName": "/canned_response_folders/[id]/responses",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetDetailsOfCannedResponsesInAFolder.in.json",
+        "out": "./lib/schemas/GetDetailsOfCannedResponsesInAFolder.out.json"
+      }
+    },
+    "ViewAllSatisfactionRatings": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "View all Satisfaction Ratings",
+      "description": "View all Satisfaction Ratings",
+      "callParams": {
+        "pathName": "/api/v2/surveys/satisfaction_ratings",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewAllSatisfactionRatings.in.json",
+        "out": "./lib/schemas/ViewAllSatisfactionRatings.out.json"
+      }
+    },
+    "ListAllTimeEntries": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Time Entries",
+      "description": "List All Time Entries",
+      "callParams": { "pathName": "/api/v2/time_entries", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllTimeEntries.in.json",
+        "out": "./lib/schemas/ListAllTimeEntries.out.json"
+      }
+    },
+    "ListAllEmailConfigs": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Email Configs",
+      "description": "List All Email Configs",
+      "callParams": { "pathName": "/api/v2/email_configs", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllEmailConfigs.in.json",
+        "out": "./lib/schemas/ListAllEmailConfigs.out.json"
+      }
+    },
+    "ListAllEmailMailboxes": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Email Mailboxes",
+      "description": "List All Email Mailboxes",
+      "callParams": { "pathName": "/api/v2/email/mailboxes", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllEmailMailboxes.in.json",
+        "out": "./lib/schemas/ListAllEmailMailboxes.out.json"
+      }
+    },
+    "ListAllProducts": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Products",
+      "description": "List All Products",
+      "callParams": { "pathName": "/api/v2/products", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllProducts.in.json",
+        "out": "./lib/schemas/ListAllProducts.out.json"
+      }
+    },
+    "ListAllBusinessHours": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Business Hours",
+      "description": "List All Business Hours",
+      "callParams": { "pathName": "/api/v2/business_hours", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllBusinessHours.in.json",
+        "out": "./lib/schemas/ListAllBusinessHours.out.json"
+      }
+    },
+    "ListAllScenarioAutomations": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All Scenario Automations",
+      "description": "List All Scenario Automations",
+      "callParams": {
+        "pathName": "/scenario_automations.json",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllScenarioAutomations.in.json",
+        "out": "./lib/schemas/ListAllScenarioAutomations.out.json"
+      }
+    },
+    "ListAllSlaPolicies": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "List All SLA Policies",
+      "description": "List All SLA Policies",
+      "callParams": { "pathName": "/api/v2/sla_policies", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ListAllSlaPolicies.in.json",
+        "out": "./lib/schemas/ListAllSlaPolicies.out.json"
+      }
+    }
+  },
+  "actions": {
+    "CreateAnOutboundEmail": {
+      "main": "./lib/actions/action.js",
+      "title": "Create an Outbound Email",
+      "description": "Create an Outbound Email",
+      "callParams": {
+        "pathName": "/api/v2/tickets/outbound_email",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateAnOutboundEmail.in.json",
+        "out": "./lib/schemas/CreateAnOutboundEmail.out.json"
+      }
+    },
+    "FilterTickets": {
+      "main": "./lib/actions/action.js",
+      "title": "Filter Tickets",
+      "description": "Filter Tickets",
+      "callParams": {
+        "pathName": "/api/v2/search/tickets?query=[query]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/FilterTickets.in.json",
+        "out": "./lib/schemas/FilterTickets.out.json"
+      }
+    },
+    "UpdateATicket": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a Ticket ",
+      "description": "Update a Ticket ",
+      "callParams": { "pathName": "/api/v2/tickets/[id]", "method": "put" },
+      "metadata": {
+        "in": "./lib/schemas/UpdateATicket.in.json",
+        "out": "./lib/schemas/UpdateATicket.out.json"
+      }
+    },
+    "UpdateMultipleTickets": {
+      "main": "./lib/actions/action.js",
+      "title": "Update Multiple Tickets",
+      "description": "Update Multiple Tickets",
+      "callParams": {
+        "pathName": "/api/v2/tickets/bulk_update",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateMultipleTickets.in.json",
+        "out": "./lib/schemas/UpdateMultipleTickets.out.json"
+      }
+    },
+    "ForwardATicket": {
+      "main": "./lib/actions/action.js",
+      "title": "Forward a ticket",
+      "description": "Forward a ticket",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[id]/forward",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ForwardATicket.in.json",
+        "out": "./lib/schemas/ForwardATicket.out.json"
+      }
+    },
+    "DeleteMultipleTickets": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete Multiple Tickets",
+      "description": "Delete Multiple Tickets",
+      "callParams": {
+        "pathName": "/api/v2/tickets/bulk_delete",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/DeleteMultipleTickets.in.json",
+        "out": "./lib/schemas/DeleteMultipleTickets.out.json"
+      }
+    },
+    "UpdateATicketField": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a Ticket Field",
+      "description": "Update a Ticket Field",
+      "callParams": {
+        "pathName": "/api/v2/admin/ticket_fields/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateATicketField.in.json",
+        "out": "./lib/schemas/UpdateATicketField.out.json"
+      }
+    },
+    "ListAllSectionsForATicketField": {
+      "main": "./lib/actions/action.js",
+      "title": "List All Sections for a Ticket Field",
+      "description": "List All Sections for a Ticket Field",
+      "callParams": {
+        "pathName": "/api/v2/admin/ticket_fields/[id]/sections",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllSectionsForATicketField.in.json",
+        "out": "./lib/schemas/ListAllSectionsForATicketField.out.json"
+      }
+    },
+    "CreateASection": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Section",
+      "description": "Create a Section",
+      "callParams": {
+        "pathName": "/api/v2/admin/ticket_fields/[id]/sections",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateASection.in.json",
+        "out": "./lib/schemas/CreateASection.out.json"
+      }
+    },
+    "ListASpecificSectionDetails": {
+      "main": "./lib/actions/action.js",
+      "title": "List a specific Section details",
+      "description": "List a specific Section details",
+      "callParams": {
+        "pathName": "/api/v2/admin/ticket_fields/[id]/sections/[section_id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListASpecificSectionDetails.in.json",
+        "out": "./lib/schemas/ListASpecificSectionDetails.out.json"
+      }
+    },
+    "UpdateASection": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a section",
+      "description": "Update a section",
+      "callParams": {
+        "pathName": "/api/v2/admin/ticket_fields/[id]/sections/[section_id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateASection.in.json",
+        "out": "./lib/schemas/UpdateASection.out.json"
+      }
+    },
+    "CreateAReply": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Reply",
+      "description": "Create a Reply",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[id]/reply",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateAReply.in.json",
+        "out": "./lib/schemas/CreateAReply.out.json"
+      }
+    },
+    "CreateANote": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Note",
+      "description": "Create a Note",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[ticket_id]/notes",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateANote.in.json",
+        "out": "./lib/schemas/CreateANote.out.json"
+      }
+    },
+    "UpdateAConversation": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a conversation",
+      "description": "Update a conversation",
+      "callParams": {
+        "pathName": "/api/v2/conversations/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAConversation.in.json",
+        "out": "./lib/schemas/UpdateAConversation.out.json"
+      }
+    },
+    "ReplyToForward": {
+      "main": "./lib/actions/action.js",
+      "title": "Reply to Forward",
+      "description": "Reply to Forward",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[id]/reply_to_forward",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ReplyToForward.in.json",
+        "out": "./lib/schemas/ReplyToForward.out.json"
+      }
+    },
+    "ExportAccount": {
+      "main": "./lib/actions/action.js",
+      "title": "Export Account",
+      "description": "Export Account",
+      "callParams": { "pathName": "api/v2/account/export", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/ExportAccount.in.json",
+        "out": "./lib/schemas/ExportAccount.out.json"
+      }
+    },
+    "CreateAContact": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Contact",
+      "description": "Create a Contact",
+      "callParams": { "pathName": "/api/v2/contacts", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateAContact.in.json",
+        "out": "./lib/schemas/CreateAContact.out.json"
+      }
+    },
+    "ViewAContact": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Contact",
+      "description": "View a Contact",
+      "callParams": { "pathName": "/api/v2/contacts/[id]", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewAContact.in.json",
+        "out": "./lib/schemas/ViewAContact.out.json"
+      }
+    },
+    "FilterContactsbeta": {
+      "main": "./lib/actions/action.js",
+      "title": "Filter ContactsBETA",
+      "description": "Filter ContactsBETA",
+      "callParams": {
+        "pathName": "/api/v2/search/contacts?query=[query]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/FilterContactsbeta.in.json",
+        "out": "./lib/schemas/FilterContactsbeta.out.json"
+      }
+    },
+    "UpdateAContact": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a Contact",
+      "description": "Update a Contact",
+      "callParams": { "pathName": "/api/v2/contacts/[id]", "method": "put" },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAContact.in.json",
+        "out": "./lib/schemas/UpdateAContact.out.json"
+      }
+    },
+    "MakeAgent": {
+      "main": "./lib/actions/action.js",
+      "title": "Make Agent",
+      "description": "Make Agent",
+      "callParams": {
+        "pathName": "/api/v2/contacts/[id]/make_agent",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/MakeAgent.in.json",
+        "out": "./lib/schemas/MakeAgent.out.json"
+      }
+    },
+    "ContactExport": {
+      "main": "./lib/actions/action.js",
+      "title": "Contact Export",
+      "description": "Contact Export",
+      "callParams": { "pathName": "api/v2/contacts/export", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/ContactExport.in.json",
+        "out": "./lib/schemas/ContactExport.out.json"
+      }
+    },
+    "ViewAnAgent": {
+      "main": "./lib/actions/action.js",
+      "title": "View an Agent",
+      "description": "View an Agent",
+      "callParams": { "pathName": "/api/v2/agents/[id]", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewAnAgent.in.json",
+        "out": "./lib/schemas/ViewAnAgent.out.json"
+      }
+    },
+    "CreateAnAgent": {
+      "main": "./lib/actions/action.js",
+      "title": "Create an Agent",
+      "description": "Create an Agent",
+      "callParams": { "pathName": "/api/v2/agents/", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateAnAgent.in.json",
+        "out": "./lib/schemas/CreateAnAgent.out.json"
+      }
+    },
+    "UpdateAnAgent": {
+      "main": "./lib/actions/action.js",
+      "title": "Update an Agent",
+      "description": "Update an Agent",
+      "callParams": { "pathName": "/api/v2/agents/[id]", "method": "put" },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAnAgent.in.json",
+        "out": "./lib/schemas/UpdateAnAgent.out.json"
+      }
+    },
+    "CurrentlyAuthenticatedAgent": {
+      "main": "./lib/actions/action.js",
+      "title": "Currently Authenticated Agent",
+      "description": "Currently Authenticated Agent",
+      "callParams": { "pathName": "/api/v2/agents/me", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/CurrentlyAuthenticatedAgent.in.json",
+        "out": "./lib/schemas/CurrentlyAuthenticatedAgent.out.json"
+      }
+    },
+    "CreateMultipleAgents": {
+      "main": "./lib/actions/action.js",
+      "title": "Create Multiple Agents",
+      "description": "Create Multiple Agents",
+      "callParams": { "pathName": "/api/v2/agents/bulk", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateMultipleAgents.in.json",
+        "out": "./lib/schemas/CreateMultipleAgents.out.json"
+      }
+    },
+    "ViewASkill": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Skill",
+      "description": "View a Skill",
+      "callParams": { "pathName": "/api/v2/skills/[id]", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewASkill.in.json",
+        "out": "./lib/schemas/ViewASkill.out.json"
+      }
+    },
+    "CreateASkill": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Skill",
+      "description": "Create a Skill",
+      "callParams": { "pathName": "api/v2/skills", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateASkill.in.json",
+        "out": "./lib/schemas/CreateASkill.out.json"
+      }
+    },
+    "UpdateASkill": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a Skill",
+      "description": "Update a Skill",
+      "callParams": { "pathName": "api/v2/skills/[id]", "method": "update" },
+      "metadata": {
+        "in": "./lib/schemas/UpdateASkill.in.json",
+        "out": "./lib/schemas/UpdateASkill.out.json"
+      }
+    },
+    "ViewARole": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Role",
+      "description": "View a Role",
+      "callParams": { "pathName": "/api/v2/roles/[id]", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewARole.in.json",
+        "out": "./lib/schemas/ViewARole.out.json"
+      }
+    },
+    "CreateACompany": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Company",
+      "description": "Create a Company",
+      "callParams": { "pathName": "/api/v2/companies", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateACompany.in.json",
+        "out": "./lib/schemas/CreateACompany.out.json"
+      }
+    },
+    "ViewACompany": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Company",
+      "description": "View a Company",
+      "callParams": { "pathName": "/api/v2/companies/[id]", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewACompany.in.json",
+        "out": "./lib/schemas/ViewACompany.out.json"
+      }
+    },
+    "SearchCompanies": {
+      "main": "./lib/actions/action.js",
+      "title": "Search Companies",
+      "description": "Search Companies",
+      "callParams": {
+        "pathName": "/api/v2/companies/autocomplete?name=[keyword]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/SearchCompanies.in.json",
+        "out": "./lib/schemas/SearchCompanies.out.json"
+      }
+    },
+    "FilterCompaniesbeta": {
+      "main": "./lib/actions/action.js",
+      "title": "Filter CompaniesBETA",
+      "description": "Filter CompaniesBETA",
+      "callParams": {
+        "pathName": "/api/v2/search/companies?query=[query]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/FilterCompaniesbeta.in.json",
+        "out": "./lib/schemas/FilterCompaniesbeta.out.json"
+      }
+    },
+    "UpdateACompany": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a Company",
+      "description": "Update a Company",
+      "callParams": { "pathName": "/api/v2/companies/[id]", "method": "put" },
+      "metadata": {
+        "in": "./lib/schemas/UpdateACompany.in.json",
+        "out": "./lib/schemas/UpdateACompany.out.json"
+      }
+    },
+    "CompanyExport": {
+      "main": "./lib/actions/action.js",
+      "title": "Company Export",
+      "description": "Company Export",
+      "callParams": { "pathName": "api/v2/companies/export", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CompanyExport.in.json",
+        "out": "./lib/schemas/CompanyExport.out.json"
+      }
+    },
+    "CreateACannedResponse": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a canned response",
+      "description": "Create a canned response",
+      "callParams": {
+        "pathName": "/api/v2/canned_responses",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateACannedResponse.in.json",
+        "out": "./lib/schemas/CreateACannedResponse.out.json"
+      }
+    },
+    "ViewACannedResponse": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Canned Response",
+      "description": "View a Canned Response",
+      "callParams": {
+        "pathName": "/api/v2/canned_responses/[id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewACannedResponse.in.json",
+        "out": "./lib/schemas/ViewACannedResponse.out.json"
+      }
+    },
+    "UpdateACannedResponse": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a canned response",
+      "description": "Update a canned response",
+      "callParams": {
+        "pathName": "api/v2/canned_responses/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateACannedResponse.in.json",
+        "out": "./lib/schemas/UpdateACannedResponse.out.json"
+      }
+    },
+    "BulkCreateCannedResponses": {
+      "main": "./lib/actions/action.js",
+      "title": "Bulk Create Canned Responses",
+      "description": "Bulk Create Canned Responses",
+      "callParams": {
+        "pathName": "/api/v2/canned_responses/bulk",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/BulkCreateCannedResponses.in.json",
+        "out": "./lib/schemas/BulkCreateCannedResponses.out.json"
+      }
+    },
+    "CreateFolder": {
+      "main": "./lib/actions/action.js",
+      "title": "Create Folder",
+      "description": "Create Folder",
+      "callParams": {
+        "pathName": "/api/v2/canned_response_folder",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateFolder.in.json",
+        "out": "./lib/schemas/CreateFolder.out.json"
+      }
+    },
+    "UpdateFolder": {
+      "main": "./lib/actions/action.js",
+      "title": "Update Folder",
+      "description": "Update Folder",
+      "callParams": {
+        "pathName": "/api/v2/canned_response_folder/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateFolder.in.json",
+        "out": "./lib/schemas/UpdateFolder.out.json"
+      }
+    },
+    "ListAllCannedResponsesInAFolder": {
+      "main": "./lib/actions/action.js",
+      "title": "List All Canned Responses in a Folder",
+      "description": "List All Canned Responses in a Folder",
+      "callParams": {
+        "pathName": "/canned_response_folders/[id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ListAllCannedResponsesInAFolder.in.json",
+        "out": "./lib/schemas/ListAllCannedResponsesInAFolder.out.json"
+      }
+    },
+    "CreateASatisfactionRating": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Satisfaction Rating",
+      "description": "Create a Satisfaction Rating",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[ticket_id]/satisfaction_ratings",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateASatisfactionRating.in.json",
+        "out": "./lib/schemas/CreateASatisfactionRating.out.json"
+      }
+    },
+    "CreateATimeEntry": {
+      "main": "./lib/actions/action.js",
+      "title": "Create a Time Entry",
+      "description": "Create a Time Entry",
+      "callParams": {
+        "pathName": "/api/v2/tickets/[ticket_id]/time_entries",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateATimeEntry.in.json",
+        "out": "./lib/schemas/CreateATimeEntry.out.json"
+      }
+    },
+    "UpdateATimeEntry": {
+      "main": "./lib/actions/action.js",
+      "title": "Update a Time Entry",
+      "description": "Update a Time Entry",
+      "callParams": {
+        "pathName": "/api/v2/time_entries/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateATimeEntry.in.json",
+        "out": "./lib/schemas/UpdateATimeEntry.out.json"
+      }
+    },
+    "StartstopTimer": {
+      "main": "./lib/actions/action.js",
+      "title": "Start/Stop Timer",
+      "description": "Start/Stop Timer",
+      "callParams": {
+        "pathName": "/api/v2/time_entries/[time_entry_id]/toggle_timer",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/StartstopTimer.in.json",
+        "out": "./lib/schemas/StartstopTimer.out.json"
+      }
+    },
+    "ViewAnEmailConfig": {
+      "main": "./lib/actions/action.js",
+      "title": "View an Email Config",
+      "description": "View an Email Config",
+      "callParams": {
+        "pathName": "/api/v2/email_configs/[id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewAnEmailConfig.in.json",
+        "out": "./lib/schemas/ViewAnEmailConfig.out.json"
+      }
+    },
+    "CreateAnEmailMailbox": {
+      "main": "./lib/actions/action.js",
+      "title": "Create an Email Mailbox",
+      "description": "Create an Email Mailbox",
+      "callParams": { "pathName": "/api/v2/email/mailboxes", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateAnEmailMailbox.in.json",
+        "out": "./lib/schemas/CreateAnEmailMailbox.out.json"
+      }
+    },
+    "ViewAnEmailMailbox": {
+      "main": "./lib/actions/action.js",
+      "title": "View an Email Mailbox",
+      "description": "View an Email Mailbox",
+      "callParams": {
+        "pathName": "/api/v2/email/mailboxes/[id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewAnEmailMailbox.in.json",
+        "out": "./lib/schemas/ViewAnEmailMailbox.out.json"
+      }
+    },
+    "UpdateAnEmailMailbox": {
+      "main": "./lib/actions/action.js",
+      "title": "Update an Email Mailbox",
+      "description": "Update an Email Mailbox",
+      "callParams": {
+        "pathName": "/api/v2/email/mailboxes/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAnEmailMailbox.in.json",
+        "out": "./lib/schemas/UpdateAnEmailMailbox.out.json"
+      }
+    },
+    "UpdateMailboxSettings": {
+      "main": "./lib/actions/action.js",
+      "title": "Update Mailbox Settings",
+      "description": "Update Mailbox Settings",
+      "callParams": { "pathName": "/api/v2/email/settings", "method": "put" },
+      "metadata": {
+        "in": "./lib/schemas/UpdateMailboxSettings.in.json",
+        "out": "./lib/schemas/UpdateMailboxSettings.out.json"
+      }
+    },
+    "ViewMailboxSettings": {
+      "main": "./lib/actions/action.js",
+      "title": "View Mailbox Settings",
+      "description": "View Mailbox Settings",
+      "callParams": { "pathName": "/api/v2/email/settings", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewMailboxSettings.in.json",
+        "out": "./lib/schemas/ViewMailboxSettings.out.json"
+      }
+    },
+    "UpdateAutomaticBccEmails": {
+      "main": "./lib/actions/action.js",
+      "title": "Update Automatic Bcc emails",
+      "description": "Update Automatic Bcc emails",
+      "callParams": {
+        "pathName": "/api/v2/notifications/email/bcc",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAutomaticBccEmails.in.json",
+        "out": "./lib/schemas/UpdateAutomaticBccEmails.out.json"
+      }
+    },
+    "ViewAutomaticBccEmails": {
+      "main": "./lib/actions/action.js",
+      "title": "View Automatic Bcc emails",
+      "description": "View Automatic Bcc emails",
+      "callParams": {
+        "pathName": "/api/v2/notifications/email/bcc",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewAutomaticBccEmails.in.json",
+        "out": "./lib/schemas/ViewAutomaticBccEmails.out.json"
+      }
+    },
+    "ViewAProduct": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Product",
+      "description": "View a Product",
+      "callParams": { "pathName": "/api/v2/products/[id]", "method": "get" },
+      "metadata": {
+        "in": "./lib/schemas/ViewAProduct.in.json",
+        "out": "./lib/schemas/ViewAProduct.out.json"
+      }
+    },
+    "ViewABusinessHour": {
+      "main": "./lib/actions/action.js",
+      "title": "View a Business Hour",
+      "description": "View a Business Hour",
+      "callParams": {
+        "pathName": "/api/v2/business_hours/[id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewABusinessHour.in.json",
+        "out": "./lib/schemas/ViewABusinessHour.out.json"
+      }
+    },
+    "CreateSlaPolicies": {
+      "main": "./lib/actions/action.js",
+      "title": "Create SLA Policies",
+      "description": "Create SLA Policies",
+      "callParams": { "pathName": "/api/v2/sla_policies", "method": "post" },
+      "metadata": {
+        "in": "./lib/schemas/CreateSlaPolicies.in.json",
+        "out": "./lib/schemas/CreateSlaPolicies.out.json"
+      }
+    },
+    "UpdateAnSlaPolicy": {
+      "main": "./lib/actions/action.js",
+      "title": "Update an SLA Policy",
+      "description": "Update an SLA Policy",
+      "callParams": {
+        "pathName": "/api/v2/sla_policies/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAnSlaPolicy.in.json",
+        "out": "./lib/schemas/UpdateAnSlaPolicy.out.json"
+      }
+    },
+    "ViewAnAutomationRule": {
+      "main": "./lib/actions/action.js",
+      "title": "View an Automation Rule",
+      "description": "View an Automation Rule",
+      "callParams": {
+        "pathName": "/api/v2/automations/[automation_type_id]/rules/[id]",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewAnAutomationRule.in.json",
+        "out": "./lib/schemas/ViewAnAutomationRule.out.json"
+      }
+    },
+    "CreateAnAutomationRule": {
+      "main": "./lib/actions/action.js",
+      "title": "Create an Automation Rule",
+      "description": "Create an Automation Rule",
+      "callParams": {
+        "pathName": "/api/v2/automations/[automation_type_id]/rules",
+        "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateAnAutomationRule.in.json",
+        "out": "./lib/schemas/CreateAnAutomationRule.out.json"
+      }
+    },
+    "UpdateAnAutomationRule": {
+      "main": "./lib/actions/action.js",
+      "title": "Update an Automation Rule",
+      "description": "Update an Automation Rule",
+      "callParams": {
+        "pathName": "/api/v2/automations/[automation_type_id]/rules/[id]",
+        "method": "put"
+      },
+      "metadata": {
+        "in": "./lib/schemas/UpdateAnAutomationRule.in.json",
+        "out": "./lib/schemas/UpdateAnAutomationRule.out.json"
+      }
+    },
+    "ViewHelpdeskSettings": {
+      "main": "./lib/actions/action.js",
+      "title": "View Helpdesk Settings",
+      "description": "View Helpdesk Settings",
+      "callParams": {
+        "pathName": "/api/v2/settings/helpdesk",
+        "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ViewHelpdeskSettings.in.json",
+        "out": "./lib/schemas/ViewHelpdeskSettings.out.json"
+      }
+    }
+  }
+}

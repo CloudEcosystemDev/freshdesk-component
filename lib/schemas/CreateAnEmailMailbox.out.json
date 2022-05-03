@@ -1,0 +1,1 @@
+{"id": 25, "name": "Test emailbox via create api", "support_email": "testemail@gmail.com", "group_id": null, "default_reply_email": false, "active": false, "mailbox_type": "freshdesk_mailbox", "created_at": "2019-11-04T07:26:53Z", "updated_at": "2019-11-04T07:26:53Z", "product_id": null, "freshdesk_mailbox": {"forward_email": "gmailcomtestemail@freshdesk.com"}}
